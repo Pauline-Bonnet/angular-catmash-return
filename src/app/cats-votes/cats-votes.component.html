@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="style-circle circle1"></div>
+  <div class="style-circle circle2"></div>
+  <div class="style-circle circle3"></div>
+  <div class="style-circle circle4"></div>
+
+  <!-- <button type="button" (click)="reinitVotes()">Réinitialiser vos votes</button> -->
+
+  <div class="cat-container">
+    <div class="cat">
+      <app-cat (onSelectionCat)="onSelectionCat()"
+                [cat]="firstCat"
+                [cats]="cats"></app-cat>
+    </div>
+    <div class="cat">
+      <app-cat (onSelectionCat)="onSelectionCat()"
+                [cat]="secondCat"
+                [cats]="cats"></app-cat>
+    </div>
+  </div>
+
+  <button type="button" (click)="showResults()">Voir les plus beaux chats</button>
+</div>
