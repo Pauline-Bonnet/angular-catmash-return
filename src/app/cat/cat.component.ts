@@ -21,6 +21,6 @@ export class CatComponent {
     event.stopPropagation();
     this.onSelectionCat.emit();
     this.service.incrementCount(this.cat);
-    console.log('point', this.cat.points)
+    localStorage.setItem('cats', JSON.stringify(this.cats));
   }
 }

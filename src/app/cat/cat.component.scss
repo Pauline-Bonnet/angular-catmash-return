@@ -11,6 +11,7 @@
   align-items: center;
 
   .card {
+    position: relative;
     width: 400px;
     height: 500px;
     background: white;
@@ -21,8 +22,26 @@
     background: linear-gradient(to right bottom,
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.2));
-    z-index: 100;
+    z-index: 150;
     backdrop-filter: blur(20px);
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 250;
+      opacity: 0;
+      transition: all 0.8s ease;
+
+      h2 {
+        margin: 0;
+        color: #0dd7d0;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: 'Varela Round', sans-serif;
+      }
+    }
 
     button {
       position: relative;
@@ -46,5 +65,13 @@
         object-position: 50% 50%;
       }
     }
+  }
+
+  .card:hover .text {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .card:hover img {
+    filter: grayscale(1);
   }
 }

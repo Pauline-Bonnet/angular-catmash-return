@@ -1,7 +1,23 @@
 <div class="container">
-  <div class="card">
-    <div class="cat" *ngFor="let cat of cats">
-      <img src="{{cat.url}}" alt="">
+
+  <button type="button" class="button" (click)="goBack()">Retourner voter</button>
+
+  <div class="card podium">
+    <div class="podium-container">
+      <h2>Les trois chats les plus populaires</h2>
+      <div class="cat-podium">
+        <div class="cat" *ngFor="let cat of podium">
+          <img src="{{cat.url}}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card not-podium">
+    <div class="catTab" *ngFor="let catTab of notPodium">
+      <div class="cat" *ngFor="let cat of catTab">
+        <img src="{{cat.url}}" alt="">
+      </div>
     </div>
   </div>
 </div>

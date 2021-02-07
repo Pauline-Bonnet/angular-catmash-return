@@ -22,9 +22,7 @@ export class CatsVotesComponent implements OnInit {
 
   ngOnInit(): void {
     this.catsSubcription = this.service.catsSubject.pipe(
-      tap((data: any) => {
-        this.cats = data;
-      })
+      tap((data: Cat[]) => this.cats = data)
     ).subscribe();
     this.service.emitCats();
     this.onSelectionCat()
@@ -35,14 +33,14 @@ export class CatsVotesComponent implements OnInit {
   }
 
   onSelectionCat() {
-    this.firstCat = this.service.generateRandomCat();
-    this.secondCat = this.service.generateRandomCat();
-    while (this.secondCat === this.firstCat) {
-      this.secondCat = this.service.generateRandomCat();
-    }
+    [this.firstCat, this.secondCat] = this.service.generateRandomCat(this.firstCat, this.secondCat);
   }
 
   showResults(): void {
     this.router.navigate(['results']);
+  }
+
+  reinitVotes() {
+    this.service.clearStorage();
   }
 }

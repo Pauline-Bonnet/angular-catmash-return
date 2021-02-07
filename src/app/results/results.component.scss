@@ -1,3 +1,7 @@
+@import './../../assets/styles/mixin.scss';
+
+@include button();
+
 :host {
   margin: 0;
   padding: 0;
@@ -10,22 +14,79 @@
   padding: 0;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to right top, #9af6f3, #83eeea, #69e7e2, #49dfd9, #0dd7d0);
+  z-index: 160;
 
-  // .card {
-  //   width: 150px;
-  //   height: 200px;
-  //   display: flex;
-  //   background: white;
-  //   align-items: center;
-  //   justify-content: center;
-  //   border-radius: 10px;
-  //   background: linear-gradient(to right bottom,
-  //     rgba(255, 255, 255, 0.6),
-  //     rgba(255, 255, 255, 0.2));
-  //   z-index: 100;
-  //   backdrop-filter: blur(20px);
-  // }
+  .button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .podium {
+    display: flex;
+    margin: auto;
+    padding-top: 100px;
+    justify-content: space-evenly;
+
+    .podium-container {
+      display: flex;
+      width: 60%;
+      height: 500px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      background: linear-gradient(to right bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.2));
+      border-radius: 10px;
+      backdrop-filter: blur(20px);
+      z-index: 150;
+
+      h2 {
+        margin: 0 0 20px 0;
+        color: #0dd7d0;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: 'Varela Round', sans-serif;
+      }
+
+      .cat-podium {
+        display: flex;
+        justify-content: space-evenly;
+
+        .cat:nth-child(2) {
+          margin: 0 50px;
+        }
+      }
+    }
+  }
+
+  .not-podium {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .catTab {
+      display: flex;
+    }
+
+    .cat {
+      margin-bottom: 50px;
+      justify-content: space-evenly;
+    }
+
+    .cat:nth-child(1) {
+      margin-right: 40px;
+    }
+    .cat:nth-child(2) {
+      margin-right: 40px;
+    }
+    .cat:nth-child(3) {
+      margin-right: 40px;
+    }
+  }
 
   .cat {
     position: relative;
@@ -37,7 +98,8 @@
     border-radius: 10px;
     overflow: hidden;
     outline: none;
-    cursor: pointer;
+    z-index: 180;
+
     img {
       position: absolute;
       top: 0;
@@ -48,4 +110,5 @@
       object-position: 50% 50%;
     }
   }
+
 }
