@@ -7,7 +7,6 @@
       <h2>Les trois chats les plus populaires</h2>
       <div class="cat-podium">
         <div class="cat" *ngFor="let cat of podium">
-          <span class="text"><h2>{{ cat.points }} votes</h2></span>
           <img src="{{ cat.url }}" alt="">
           <div class="text"><h2>{{ cat.points }} votes</h2></div>
         </div>

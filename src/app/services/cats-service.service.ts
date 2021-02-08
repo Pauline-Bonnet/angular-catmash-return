@@ -28,7 +28,7 @@ export class CatsService {
       this.catsTab[Math.floor(Math.random() * this.catsTab.length)]
     ];
 
-    if (randomCats[0] === randomCats[1] || randomCats[0] === firstCat || randomCats[1] === secondCat) {
+    if ((randomCats[0] === randomCats[1]) || (randomCats[0] === firstCat) || (randomCats[1] === secondCat)) {
       return this.generateRandomCat(firstCat, secondCat);
     }
     return randomCats;

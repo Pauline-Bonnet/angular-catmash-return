@@ -9,9 +9,7 @@ import { Cat } from '../models/models';
 })
 export class CatComponent {
 
-  count: number = 0;
   @Input() cats: Cat[];
-  @Input() selectedCat: Cat;
   @Input() cat: Cat;
   @Output('onSelectionCat') onSelectionCat: EventEmitter<Cat> = new EventEmitter<Cat>();
 
