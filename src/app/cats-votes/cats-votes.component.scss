@@ -31,9 +31,24 @@
 
   footer {
     margin: auto;
+    z-index: 200;
 
     .button:nth-child(1) {
       margin-right: 20px;
+
+      &:hover {
+        background: linear-gradient(to right bottom,
+        rgba(16, 196, 141, 0.7),
+        rgba(16, 196, 141, 0.2));
+        color: white;
+      }
+    }
+
+    .button:nth-child(2):hover {
+      background: linear-gradient(to right bottom,
+      rgba(196, 16, 86, 0.7),
+      rgba(196, 16, 86, 0.2));
+      color: white;
     }
   }
 }

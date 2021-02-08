@@ -20,6 +20,14 @@
     position: absolute;
     top: 20px;
     left: 20px;
+
+
+    &:hover {
+      background: linear-gradient(to right bottom,
+      rgba(16, 196, 141, 0.7),
+      rgba(16, 196, 141, 0.2));
+      color: white;
+    }
   }
 
   .podium {
@@ -30,8 +38,9 @@
 
     .podium-container {
       display: flex;
-      width: 60%;
-      height: 500px;
+      width: fit-content;
+      height: 450px;
+      padding: 0 50px;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -75,6 +84,38 @@
     .cat {
       margin-bottom: 50px;
       justify-content: space-evenly;
+
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      perspective: 500px;
+
+      .text {
+        content: "";
+        position: absolute;
+        display: flex;
+        padding: 5% 8%;
+        width: 70%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        color: #0dd7d0;
+        background: rgba(255,255,255,0.9);
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Varela Round', sans-serif;
+        transform: translate(-50%, -50%) rotateY(90deg);
+        transform-origin: 50%;
+        opacity: 0;
+        transition: all 0.4s ease-in;
+      }
+
+      &:hover .text {
+        transform: translate(-50%, -50%) rotateY(0deg);
+        opacity: 1;
+      }
     }
 
     .cat:nth-child(1) {
@@ -100,6 +141,10 @@
     outline: none;
     z-index: 180;
 
+    text-align: center;
+    cursor: pointer;
+    perspective: 500px;
+
     img {
       position: absolute;
       top: 0;
@@ -108,6 +153,33 @@
       height: 100%;
       object-fit: cover;
       object-position: 50% 50%;
+    }
+
+    .text {
+      content: "";
+      position: absolute;
+      display: flex;
+      padding: 5% 8%;
+      width: 70%;
+      height: 40%;
+      justify-content: center;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      color: #0dd7d0;
+      background: rgba(255,255,255,0.9);
+      font-size: 20px;
+      font-weight: 600;
+      font-family: 'Varela Round', sans-serif;
+      transform: translate(-50%, -50%) rotateY(90deg);
+      transform-origin: 50%;
+      opacity: 0;
+      transition: all 0.4s ease-in;
+    }
+
+    &:hover .text {
+      transform: translate(-50%, -50%) rotateY(0deg);
+      opacity: 1;
     }
   }
 

@@ -7,14 +7,14 @@
     color: #0dd7d0;
     border: none;
     border-radius: 5px;
-    background:  white;
     background: linear-gradient(to right bottom,
     rgba(255, 255, 255, 0.7),
     rgba(255, 255, 255, 0.2));
     font-family: 'Varela Round', sans-serif;
     font-size: 16px;
+    outline: none;
     cursor: pointer;
     backdrop-filter: blur(10px);
-    z-index: 160;
+    z-index: 200;
   }
 }

@@ -11,7 +11,6 @@ import { CatsService } from '../services/cats-service.service';
   styleUrls: ['./cats-votes.component.scss']
 })
 export class CatsVotesComponent implements OnInit {
-
   cats: Cat[];
   firstCat: Cat;
   secondCat: Cat;
@@ -40,6 +39,11 @@ export class CatsVotesComponent implements OnInit {
     this.router.navigate(['results']);
   }
 
+  /**
+   * CAUTION, this function clears the storage and suppress all the points
+   * TODO: add confirmation modal : 'You're about to suppress all your votes,
+   *       are you sure you want to continue?'
+   */
   reinitVotes() {
     this.service.clearStorage();
   }

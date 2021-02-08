@@ -24,6 +24,7 @@
       rgba(255, 255, 255, 0.2));
     z-index: 150;
     backdrop-filter: blur(20px);
+    transition: all 0.8s ease;
 
     .text {
       position: absolute;
