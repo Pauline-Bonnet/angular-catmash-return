@@ -35,6 +35,10 @@ export class CatsVotesComponent implements OnInit {
     [this.firstCat, this.secondCat] = this.service.generateRandomCat(this.firstCat, this.secondCat);
   }
 
+  /**
+   * TODO: block the navigation if there are not at least 10 votes
+   * (with modal that says: 'Add votes to access results')
+   */
   showResults(): void {
     this.router.navigate(['results']);
   }
