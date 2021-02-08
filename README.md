@@ -1,6 +1,10 @@
 # AngularCatmashReturn
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.2.  
+
+## Install application for first time  
+Get repository `git clone git@github.com:Pauline-Bonnet/angular-catmash-return.git`  
+In angular-catmash-return repository `npm install`
 
 ## Development server
 
