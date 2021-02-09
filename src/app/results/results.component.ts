@@ -1,7 +1,7 @@
-import { Component, forwardRef, OnInit } from '@angular/core';
-import {Location} from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { Cat } from '../models/models';
 import { CatsService } from '../services/cats-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-results',
@@ -15,7 +15,7 @@ export class ResultsComponent implements OnInit {
   notPodium: Cat[][] = [];
 
   constructor(private service: CatsService,
-              private location: Location) { }
+              private router: Router) { }
 
   ngOnInit(): void {
     this.cats = this.service.init();
@@ -44,6 +44,6 @@ export class ResultsComponent implements OnInit {
   }
 
   goBack(): void {
-    this.location.back();
+    this.router.navigate(['votes']);
   }
 }

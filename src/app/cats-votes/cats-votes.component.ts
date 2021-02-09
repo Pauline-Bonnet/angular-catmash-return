@@ -24,7 +24,7 @@ export class CatsVotesComponent implements OnInit {
       tap((data: Cat[]) => this.cats = data)
     ).subscribe();
     this.service.emitCats();
-    this.onSelectionCat()
+    this.onSelectionCat();
   }
 
   ngOnDestroy(): void {
