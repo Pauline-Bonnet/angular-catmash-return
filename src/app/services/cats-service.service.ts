@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Cat } from '../models/models';
+import { Cat } from './../models/models';
 import { data } from './../../assets/data/data';
 
 @Injectable({

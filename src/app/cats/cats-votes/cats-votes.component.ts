@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { Cat } from '../models/models';
-import { CatsService } from '../services/cats-service.service';
+import { Cat } from './../../models/models';
+import { CatsService } from '../../services/cats-service.service';
 
 @Component({
   selector: 'app-cats-votes',

@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CatsService } from '../services/cats-service.service';
-import { Cat } from '../models/models';
+import { CatsService } from './../../services/cats-service.service';
+import { Cat } from './../../models/models';
 
 @Component({
   selector: 'app-cat',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Cat } from '../models/models';
-import { CatsService } from '../services/cats-service.service';
+import { Cat } from './../../models/models';
+import { CatsService } from './../../services/cats-service.service';
 import { Router } from '@angular/router';
 
 @Component({
