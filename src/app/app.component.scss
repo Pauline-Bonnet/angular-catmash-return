@@ -5,5 +5,10 @@
   padding: 0;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
+app-navbar {
+  z-index: 999;
+}

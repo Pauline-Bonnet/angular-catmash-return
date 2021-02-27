@@ -15,7 +15,7 @@ export class ResultsComponent implements OnInit {
   notPodium: Cat[][] = [];
 
   constructor(private service: CatsService,
-              private router: Router) { }
+              private router: Router) {}
 
   ngOnInit(): void {
     this.cats = this.service.init();

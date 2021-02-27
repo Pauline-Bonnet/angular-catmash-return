@@ -25,27 +25,47 @@
     position: relative;
 
     .cat {
-      width: 50%;
+      width: 80%;
       height: 100%;
     }
   }
 
   footer {
+    position: relative;
     margin: auto;
     z-index: 200;
 
-    .button:nth-child(1) {
-      margin-right: 20px;
-
-      &:hover {
-        background: $greenGradient;
-        color: white;
-      }
-    }
-
-    .button:nth-child(2):hover {
+    .button {
+      position: absolute;
+      left: 50%;
+      bottom: 0px;
+      transform: translateX(-50%);
       background: $redGradient;
       color: white;
     }
+
+    .button:hover {
+      background: $buttonWhiteGradient;
+      color: #BA006E;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container .cat-container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+    margin-top: 110px;
+
+    .cat {
+      width: 80%;
+      height: 40%;
+    }
+  }
+
+  .container footer {
+    height: 20%;
   }
 }
